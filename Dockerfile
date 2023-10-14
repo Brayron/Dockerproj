@@ -9,7 +9,6 @@ COPY --chown=www-data:www-data . /var/www/html
 #RUN chown -R www-data:www-data /var/www
 RUN curl -sL https://deb.nodesource.com/setup_lts.x | bash - \
     && apt-get install -y nodejs \
-    && apt-get install -y npm \
     && npm install
 
 # Establece el directorio de trabajo en la carpeta de la aplicación Laravel
